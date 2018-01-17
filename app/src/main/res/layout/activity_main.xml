@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/iniciar"
+        android:background="@android:drawable/alert_dark_frame"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/iniciar">
+
+        <com.example.cesar.pruebacolor.MainActivity
+            android:id="@+id/java_camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/colorv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="colorV"
+        android:layout_toRightOf="@+id/frameLayout"
+        android:layout_toEndOf="@+id/frameLayout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/colora" />
+
+    <TextView
+        android:id="@+id/colorr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="colorR"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/colorv"
+        android:layout_alignEnd="@+id/colorv" />
+
+    <TextView
+        android:id="@+id/colora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ColorA"
+        android:layout_below="@+id/colorr"
+        android:layout_alignRight="@+id/colorv"
+        android:layout_alignEnd="@+id/colorv" />
+
+    <TextView
+        android:id="@+id/colorn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ColorN"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/colora"
+        android:layout_alignStart="@+id/colora" />
+
+    <TextView
+        android:id="@+id/dato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/colorv"
+        android:layout_alignStart="@+id/colorv"
+        android:layout_below="@+id/colorv"
+        android:layout_marginTop="26dp"
+        android:text="dato" />
+
+    <Button
+        android:id="@+id/iniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Iniciar"
+        android:textColor="@android:color/background_light"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/detener"
+        android:layout_alignBottom="@+id/detener"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/detener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_light"
+        android:text="Detener"
+        android:textColor="@android:color/background_light"
+        android:visibility="invisible"
+        android:layout_below="@+id/colorn"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/frameLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/mapeos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/colorn"
+        android:layout_alignStart="@+id/colorn"
+        android:layout_below="@+id/colorv"
+        android:text="mapeos:" />
+
+</RelativeLayout>
